@@ -7,7 +7,7 @@
 
 [![NPM](https://nodei.co/npm/validate-commit-email.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/validate-commit-email/)
 
-Validate the email of the current committer in your pre-commit hook.
+Validate the email of the current committer in your commit message hook.
 
 If you are using [husky](https://www.npmjs.com/package/husky), add this to your `package.json`:
 
