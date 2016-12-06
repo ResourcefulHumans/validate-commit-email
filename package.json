@@ -1,13 +1,14 @@
 {
   "name": "validate-commit-email",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "Validate the email of the current committer in your pre-commit hook.",
   "main": "index.js",
   "scripts": {
     "test": "environment=testing mocha --reporter=dot --timeout=1350 test/\\*.js",
     "lint": "standard",
     "precommit": "npm run lint && npm test",
-    "commitmsg": "validate-commit-msg"
+    "commitmsg": "validate-commit-msg",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "keywords": [
     "git",
@@ -22,12 +23,17 @@
     "husky": "^0.11.9",
     "mocha": "^3.2.0",
     "standard": "^8.6.0",
-    "validate-commit-msg": "^2.8.2"
+    "validate-commit-msg": "^2.8.2",
+    "semantic-release": "^6.3.2"
   },
   "bin": {
     "validate-commit-email": "./index.js"
   },
   "dependencies": {
     "colors": "^1.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ResourcefulHumans/validate-commit-email.git"
   }
 }
