@@ -12,7 +12,7 @@ describe('validate-commit-email', () => {
       PATH: process.env.PATH
     }
     try {
-      childProcess.execSync('node index.js @acme.com$', {env})
+      childProcess.execSync('./index.js @acme.com$', {env})
     } catch (e) {
       expect(e.status, 'Exit code should be 1').to.equal(1)
       expect(e.stdout.toString(), 'An error messsage should have been produced').to.match(/Email not acceptable: john.doe@example.com/)
@@ -24,6 +24,6 @@ describe('validate-commit-email', () => {
       'GIT_AUTHOR_EMAIL': 'john.doe@example.com',
       PATH: process.env.PATH
     }
-    childProcess.execSync('node index.js @example.com$', {env})
+    childProcess.execSync('./index.js @example.com$', {env})
   })
 })
