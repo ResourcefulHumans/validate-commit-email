@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const colors = require('colors')
 const email = process.env.GIT_AUTHOR_EMAIL
 const emailPattern = process.argv[process.argv.length - 1]
