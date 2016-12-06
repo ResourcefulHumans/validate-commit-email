@@ -1,6 +1,6 @@
 'use strict'
 
-/* global describe, it */
+/* global describe, it, process */
 
 const expect = require('chai').expect
 const childProcess = require('child_process')
@@ -8,7 +8,8 @@ const childProcess = require('child_process')
 describe('validate-commit-email', () => {
   it('should exit the process with 1 on invalid email', done => {
     const env = {
-      'GIT_AUTHOR_EMAIL': 'john.doe@example.com'
+      'GIT_AUTHOR_EMAIL': 'john.doe@example.com',
+      PATH: process.env.PATH
     }
     try {
       childProcess.execSync('node index.js @acme.com$', {env})
@@ -20,7 +21,8 @@ describe('validate-commit-email', () => {
   })
   it('should exit the process with 0 on valid email', () => {
     const env = {
-      'GIT_AUTHOR_EMAIL': 'john.doe@example.com'
+      'GIT_AUTHOR_EMAIL': 'john.doe@example.com',
+      PATH: process.env.PATH
     }
     childProcess.execSync('node index.js @example.com$', {env})
   })
