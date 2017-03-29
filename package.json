@@ -16,7 +16,7 @@
     "email",
     "validate"
   ],
-  "author": "Resourceful Humans <info@resourceful-humans.com>",
+  "author": "Resourceful Humans GmbH <info@resourceful-humans.com>",
   "license": "MIT",
   "devDependencies": {
     "chai": "^3.5.0",
