@@ -30,7 +30,7 @@
     "validate-commit-email": "./index.js"
   },
   "dependencies": {
-    "colors": "^1.1.2"
+    "colors": "^1.2.4"
   },
   "repository": {
     "type": "git",
